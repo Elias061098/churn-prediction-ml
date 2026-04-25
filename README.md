@@ -20,11 +20,13 @@ Python (pandas, numpy, scikit-learn, xgboost) · Airflow · Docker
 
 ## Ce que j'ai trouvé
 
-Le modèle atteint 87% de précision sur le jeu de test. 
-Les 3 variables les plus prédictives du churn sont le solde du compte, 
-l'ancienneté client et le nombre de produits souscrits. 
-Les clients avec un solde élevé mais peu de produits sont les plus à risque.
+Le modèle atteint 81,2% de précision sur le jeu de test.
+Les 3 variables les plus prédictives sont le nombre de produits souscrits,
+le salaire estimé et le solde par produit.
 
+Le modèle souffre d'un déséquilibre des classes (80/20) — piste d'amélioration
+identifiée : appliquer un rééchantillonnage SMOTE pour mieux détecter les churners.
+Les clients avec 1 produit et un solde > 50 000€ sont les plus à risque.
 ## Lancer le projet
 
 ```bash
